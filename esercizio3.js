@@ -1,33 +1,41 @@
-// 1. Creare una mappa con le lettere romane e i loro valori corrispondenti
-// 2. Creare una funzione che prenda un intero come argomento
-// 3. Creare una variabile stringa vuota per memorizzare il risultato
-// 4. Iterare attraverso la mappa per vedere quale lettera romana ha un valore più vicino al numero passato comeargomento
-// 5. Se il numero passato come argomento è maggiore o uguale al valore della lettera romana nella mappa, aggiungere la lettera romana corrispondente alla variabile result
-// 6. Sottrarre il valore della lettera romana dal numero passato come argomento
-// 7. Ripetere i passaggi finché il numero passato come argomento non è uguale a 0
-// 8. Restituire il risultato
 
-const numRomani = {
-    I: 1,
-    V: 5,
-    X: 10,
-    L: 50,
-    C: 100,
+ // creo la variabile che conterrà il risultato
+ // creo un oggetto cojtenente i numeri romani e i loro rispettivi valori
+ // ciclo l'oggetto romanNumList
+ // eseguo un ciclo fino a quando la sottrazione del numero e del valore corrente è maggiore o uguale a zero
+ // aggiungo il simbolo corrispondente alla variabile numeriRomani
+ // sottrggo il valore corrispondente dal numero
+ // return del risultato
+
+function convertiNumeroInRomano(numero) {
+ 
+  let numeriRomani = '';
+
+  const romanNumList = {
+    M: 1000,
+    CM: 900,
     D: 500,
-    M: 1000
+    CD: 400,
+    C: 100,
+    XC: 90,
+    L: 50,
+    XL: 40,
+    X: 10,
+    IX: 9,
+    V: 5,
+    IV: 4,
+    I: 1
   };
-  
-function converterNumRoman(num) {
-  
-  let result = '';
-  for (let key in numRomani) {
-    if (num >= numRomani[key]) {
-      result += key;
-      num -= numRomani[key];
-    }
-  }
-  return result;
 
+  for (let key in romanNumList) {
+  while (numero >= romanNumList[key]) {
+  numeriRomani += key;
+  numero -= romanNumList[key];
+  }
+  }
+  return numeriRomani;
 }
-  
-console.log(converterNumRoman(165))
+
+
+ console.log(convertiNumeroInRomano(51) )
+ console.log(convertiNumeroInRomano(47) )
