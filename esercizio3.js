@@ -25,7 +25,7 @@ function convertiNumeroInRomano(numero) {
       V: 5,
       IV: 4,
       I: 1
-    };
+    }
   
     for (let key in romanNumList) {
     while (numero >= romanNumList[key]) {
