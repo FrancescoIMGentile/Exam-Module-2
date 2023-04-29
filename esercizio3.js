@@ -9,33 +9,33 @@
 
 function convertiNumeroInRomano(numero) {
  
-  let numeriRomani = '';
-
-  const romanNumList = {
-    M: 1000,
-    CM: 900,
-    D: 500,
-    CD: 400,
-    C: 100,
-    XC: 90,
-    L: 50,
-    XL: 40,
-    X: 10,
-    IX: 9,
-    V: 5,
-    IV: 4,
-    I: 1
-  };
-
-  for (let key in romanNumList) {
-  while (numero >= romanNumList[key]) {
-  numeriRomani += key;
-  numero -= romanNumList[key];
+    let numeriRomani = '';
+  
+    const romanNumList = {
+      M: 1000,
+      CM: 900,
+      D: 500,
+      CD: 400,
+      C: 100,
+      XC: 90,
+      L: 50,
+      XL: 40,
+      X: 10,
+      IX: 9,
+      V: 5,
+      IV: 4,
+      I: 1
+    };
+  
+    for (let key in romanNumList) {
+    while (numero >= romanNumList[key]) {
+    numeriRomani += key;
+    numero -= romanNumList[key];
+    }
+    }
+    return numeriRomani;
   }
-  }
-  return numeriRomani;
-}
-
-
- console.log(convertiNumeroInRomano(51) )
- console.log(convertiNumeroInRomano(47) )
+  
+  
+   console.log(convertiNumeroInRomano(51) )
+   console.log(convertiNumeroInRomano(47) )
